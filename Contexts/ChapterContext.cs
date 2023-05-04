@@ -9,8 +9,7 @@ public class ChapterContext : DbContext
 public ChapterContext()
 {
 }
-public ChapterContext(DbContextOptions<ChapterContext>
-options) : base(options)
+public ChapterContext(DbContextOptions<ChapterContext> options) : base(options)
 {
 }
 protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -25,6 +24,8 @@ optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS;"+"Database=Chapter;Tr
 //Server=localhost\\SQLEXPRESS;Database=Chapter;Trusted_Connection=True;
     }
 }
-public DbSet<Livro> Livros { get; set; }
+    public DbSet<Livro> Livros { get; set; }
+    public DbSet<Usuario> Usuarios {get;set;}
+
     }
 }
